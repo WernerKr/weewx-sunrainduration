@@ -31,6 +31,10 @@
          [[[maxSolarRad]]]
              algorithm = rs
              atc = 0.9
+[Engine]
+  [[Services]]
+     process_services = ..., weewx.wxservices.StdWXCalculate, user.sunrainduration.SunshineDuration
+
 
 [RadiationDays]
     min_sunshine = 120    # Entry of extension radiationhours.py, if is installed (= limit value)
