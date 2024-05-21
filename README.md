@@ -1,29 +1,24 @@
 # weewx-sunrainduration
-Evaluates solar radiation and rain and thus generates the corresponding duration
+## Evaluates solar radiation and rain and thus generates the corresponding duration
 
-sunshine_time 	= Value when sunshine duration is recorded in W/m²
-
-sunshineDur	= Sunshine duration value in the archive interval in seconds
-
-rainDur 		= rain duration value in the archive interval in seconds
-
-hailDur 		= rain duration value (Ecowitt-Piezo) in the archive interval in seconds
-
-sunshineDur_2 	= Sunshine duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
-
-rainDur_2 		= Rain duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
+  ##### sunshine_time = Value when sunshine duration is recorded in W/m²
+  ##### sunshineDur   = Sunshine duration value in the archive interval in seconds
+  ##### rainDur    		 = rain duration value in the archive interval in seconds
+  ##### hailDur      	= rain duration value (Ecowitt-Piezo) in the archive interval in seconds
+  ##### sunshineDur_2	= Sunshine duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
+  ##### rainDur_2   		= Rain duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
 
 
-weewx.conf:
-[StdReport]
- [[Defaults]]
-   [[[Units]]]
-      [[[[Groups]]]]
+  weewx.conf:
+    [StdReport]
+      [[Defaults]]
+       [[[Units]]]
+         [[[[Groups]]]]
       
           group_deltatime = hour
 
 
-[RadiationDays]
+  [RadiationDays]
 
     min_sunshine = 120     	# Entry of extension radiationhours.py, if is installed (= limit value)
     
