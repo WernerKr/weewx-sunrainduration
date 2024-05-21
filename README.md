@@ -89,3 +89,7 @@ weewx.units.obs_group_dict['rainDur_2'] = 'group_deltatime'
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/fc3d2e26-f57e-4a0f-95a7-8d49c52d8d11)
 
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/b562ed48-a41b-427c-b545-54259dd87285)
+
+![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/bfe4adc4-9b8a-454e-827c-5f96c7b69bf9)
+
+![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/0abe03aa-a85f-437b-8eb7-9181a737760a)
