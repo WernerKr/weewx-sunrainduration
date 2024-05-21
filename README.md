@@ -67,8 +67,9 @@ not just VantagePro.
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur_2 --type=REAL
 
      Weewx V. 5.0 or newer :
-     sudo echo "y" | weectl database add-column sunshine_time
-
+     #sudo echo "y" | weectl database add-column sunshine_time
+     weectl database add-column sunshine_time --type=REAL --config=/etc/weewx/weewx.conf -y
+ 
 ```
    
     extension.py:
