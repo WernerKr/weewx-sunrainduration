@@ -96,4 +96,45 @@ not just VantagePro.
 
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/bfe4adc4-9b8a-454e-827c-5f96c7b69bf9)
 
+
+```
+[[solarRadGraph3]]
+    title = Solarstrahlung und Dauer
+    time_length = day_ago_to_now
+    time_ago = 2
+    [[[radiation]]]
+       name = Solarstrahlung
+       zIndex = 1
+       color = "#ffc83f"
+    [[[maxSolarRad]]]
+        name = Theor. Max Solarstrahlung
+        type = area
+        color = "#f7f2b4"
+        yAxis_label = "W/m2"
+   [[[sunshine_time]]]
+        name = Sonnenschein
+        color = "#ea078b"
+        yAxis_label = "Solarstrahlung W/m2"
+   [[[sunshineDur]]]
+       aggregate_type = sum
+       type = column  
+       yAxis = 1
+       yAxis_min = 0
+       yAxis_softMax = 3
+       color = "#eae7c5"
+       zIndex = 2
+
+```
+
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/0abe03aa-a85f-437b-8eb7-9181a737760a)
+
+
+```
+    [[chart3Jahr]]
+     time_length = year_ago_to_now
+        title = Regen Jahr
+        type = line
+        [[[rainRate]]]
+            yAxis = 1
+        [[[rainTotal]]]
+            name = Regen gesamt
