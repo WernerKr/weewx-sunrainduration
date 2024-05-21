@@ -1,6 +1,7 @@
 # weewx-sunrainduration
 ## Evaluates solar radiation and rain and thus generates the corresponding duration
 
+##### sunduration based on https://github.com/Jterrettaz/sunduration/blob/master/sunduration.py
 ```
    
     sunshine_time = Value when sunshine duration is recorded in W/m²
@@ -17,15 +18,21 @@
 ```
    
     weewx.conf:
+
+
+[StdReport]
+ [[Defaults]]
+  [[[Units]]]
+   [[[[Groups]]]]
+       group_deltatime = hour
   
-    [StdReport]
-      [[Defaults]]
-       [[[Units]]]
-         [[[[Groups]]]]
-          group_deltatime = hour
+[StdWXCalculate]
+     [[WXXTypes]]
+         [[[maxSolarRad]]]
+             algorithm = rs
+             atc = 0.9
 
-
-  [RadiationDays]
+[RadiationDays]
     min_sunshine = 120    # Entry of extension radiationhours.py, if is installed (= limit value)
     sunshine_coeff = 0.91 # Factor from which value sunshine is counted - the higher the later
     sunshine_min = 18     # below this value (W/m²), sunshine is not taken into account.
@@ -42,17 +49,25 @@
     sunshine2_log = 0
     rainDur2_log = 0
 
+The "atc = 0.9" and "sunshine_coeff = 0.91" have to be adjusted for your own location.
+With this adjustment, the sunshine duration values are very accurate and also work for other stations (e.g. Ecowitt), 
+not just VantagePro.
+
 ```
    
-    add_sunrain.sh:
+    add_sunrain.sh: Weewx (v4.5.0 to V4.10.2)
   
      #!/bin/bash
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshine_time --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=hailDur --type=REAL
+     # only for second station (like VantagePro and VantageVUE)
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur_2 --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur_2 --type=REAL
+
+     Weewx V. 5.0 or newer :
+     sudo echo "y" | weectl database add-column sunshine_time
 
 ```
    
