@@ -86,4 +86,5 @@ weewx.units.obs_group_dict['sunshineDur_2'] = 'group_deltatime'
 
 weewx.units.obs_group_dict['rainDur_2'] = 'group_deltatime'
 
+![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/fc3d2e26-f57e-4a0f-95a7-8d49c52d8d11)
 
