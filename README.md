@@ -4,13 +4,12 @@
 ##### sunduration based on https://github.com/Jterrettaz/sunduration/blob/master/sunduration.py
 ```
    
-    sunshine_time = Value when sunshine duration is recorded in W/m²
-    sunshine_time = Value when sunshine duration is recorded in W/m²
-    sunshineDur   = Sunshine duration value in the archive interval in seconds
-    rainDur       = rain duration value in the archive interval in seconds
-    hailDur       = rain duration value (Ecowitt-Piezo) in the archive interval in seconds
-    sunshineDur_2 = Sunshine duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
-    rainDur_2     = Rain duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
+  sunshine_time = Value when sunshine duration is recorded in W/m²
+  sunshineDur   = Sunshine duration value in the archive interval in seconds
+  rainDur       = rain duration value in the archive interval in seconds
+  hailDur       = rain duration value (Ecowitt-Piezo) in the archive interval in seconds
+  sunshineDur_2 = Sunshine duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
+  rainDur_2     = Rain duration value in the archive interval in seconds for 2. DAVIS station (e.g. live or console)
 
 ```
 
@@ -65,15 +64,20 @@ not just VantagePro.
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshine_time --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur --type=REAL
+     # for Ecowitt Stations and two rains sensor (WS90 and WH40)
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=hailDur --type=REAL
      # only for second station (like VantagePro and VantageVUE)
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur_2 --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur_2 --type=REAL
 
-     Weewx V. 5.0 or newer :
+     Weewx V5.0 or newer:
      #sudo echo "y" | weectl database add-column sunshine_time
      weectl database add-column sunshine_time --type=REAL --config=/etc/weewx/weewx.conf -y
- 
+     weectl database add-column sunshineDur --type=REAL --config=/etc/weewx/weewx.conf -y
+     weectl database add-column rainDur --type=REAL --config=/etc/weewx/weewx.conf -y
+     #weectl database add-column hailDur --type=REAL --config=/etc/weewx/weewx.conf -y
+     #weectl database add-column sunshineDur_2 --type=REAL --config=/etc/weewx/weewx.conf -y
+     #weectl database add-column rainDur_2 --type=REAL --config=/etc/weewx/weewx.conf -y     
 ```
    
     extension.py:
