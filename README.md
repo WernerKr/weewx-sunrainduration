@@ -92,6 +92,29 @@ not just VantagePro.
 
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/fc3d2e26-f57e-4a0f-95a7-8d49c52d8d11)
 
+```
+   [[[dayradiation]]]
+		color = "#e8e81b"
+            [[[[maxSolarRad]]]]
+		color = "#a7a7aa"
+            [[[[sunshine_time]]]]
+		color = "red"
+              label = Sonnenschein
+            [[[[radiation]]]]
+		fill_color = "#ecf402"
+		plot_type = bar
+
+   [[[daysunshine]]]
+           color = "#ea078b"
+           plot_type = bar
+	    yscale = 0.0, 15, 2.5
+           [[[[sunshineDur]]]]
+		data_type = sunshineDur / 60
+              y_label = "Minuten"
+              label = Sonnenschein
+
+```
+
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/b562ed48-a41b-427c-b545-54259dd87285)
 
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/bfe4adc4-9b8a-454e-827c-5f96c7b69bf9)
