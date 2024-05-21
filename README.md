@@ -80,7 +80,7 @@ not just VantagePro.
      #weectl database add-column rainDur_2 --type=REAL --config=/etc/weewx/weewx.conf -y     
 ```
    
-    extension.py:
+    extension.py: ( not more needed - now in sunrainduration.py included )
   
      import weewx.units
      weewx.units.obs_group_dict['sunshine_time'] = 'group_radiation'
