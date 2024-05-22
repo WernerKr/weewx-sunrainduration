@@ -97,7 +97,7 @@ not just VantagePro.
 		color = "#e8e81b"
             [[[[maxSolarRad]]]]
 		color = "#a7a7aa"
-            [[[[sunshine_time]]]]
+            [[[[sunshinetime]]]]
 		color = "red"
               label = Sonnenschein
             [[[[radiation]]]]
