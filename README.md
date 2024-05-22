@@ -149,6 +149,8 @@ not just VantagePro.
 
 ```
 
+### For the rain duration history or sun duration history in the Belchertown skin you need my modified belchertown.py file
+
 ![image](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/0abe03aa-a85f-437b-8eb7-9181a737760a)
 
 
@@ -161,3 +163,67 @@ not just VantagePro.
             yAxis = 1
         [[[rainTotal]]]
             name = Regen gesamt
+
+```
+![chart](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/bd2def3e-b4f4-46db-9d0c-26ba6720461c)
+
+
+```
+[[Regendauer]]
+     time_length = year_ago_to_now
+    [[[rainDur]]]
+        aggregate_type = sum
+	 type = column
+        yAxis_min = 0
+        yAxis_softMax = 14
+        color = "blue"
+   [[[rainDurTotal]]]
+         yAxis = 1
+         yAxis_min = 0
+         color = red
+         yAxis_label = "Regendauer in Std."
+         name = Regendauerverlauf
+         zIndex = 2
+
+
+```
+![dieser-monat](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/148fd17d-e85b-4bae-8cf2-dc31ded52dcf)
+
+```
+ [[Sonnenschein]]
+    [[[sunshineDur]]]
+        aggregate_type = sum
+	type = column
+        yAxis_min = 0
+        yAxis_softMax = 10
+        color = "yellow"
+   [[[sunshineDurTotal]]]
+         yAxis = 1
+         yAxis_min = 0
+         color = red
+         yAxis_label = "Sonnenscheindauer in Std"
+         name = Sonnenscheindauerverlauf
+         zIndex = 2
+```
+
+![sonnendauer](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/3273721f-f331-4e70-b4cd-2fd2de809b5a)
+
+```
+   [[sonne]]
+    title = Sonnendauer
+         aggregate_interval = 3600
+    [[[sunshineDur]]]
+        aggregate_type = sum
+        type = column
+        yAxis_min = 0
+        yAxis_softMax = 3
+        color = "#eae7c5"
+         yAxis_label_unit = "Stunden"
+   [[[sunshineDurTotal]]]
+         yAxis = 1
+         yAxis_min = 0
+         color = red
+         yAxis_label = "Sonnenscheindauer in Std"
+         name = Sonnenscheindauerverlauf
+         zIndex = 2
+
