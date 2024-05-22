@@ -134,7 +134,7 @@ not just VantagePro.
         type = area
         color = "#f7f2b4"
         yAxis_label = "W/m2"
-   [[[sunshine_time]]]
+   [[[sunshinetime]]]
         name = Sonnenschein
         color = "#ea078b"
         yAxis_label = "Solarstrahlung W/m2"
