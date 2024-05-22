@@ -64,7 +64,7 @@ not just VantagePro.
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshinetime --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur --type=REAL
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=rainDur --type=REAL
-     # for Ecowitt Stations and two rains sensor (WS90 and WH40)
+     # for Ecowitt Stations and two rain sensors (WS90 and WH40)
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=hailDur --type=REAL
      # only for second station (like VantagePro and VantageVUE)
      sudo echo "y" | wee_database --config=/etc/weewx/weewx.conf --add-column=sunshineDur2 --type=REAL
