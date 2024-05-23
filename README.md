@@ -227,3 +227,27 @@ not just VantagePro.
          name = Sonnenscheindauerverlauf
          zIndex = 2
 
+```
+
+![2024-05-23 18_49_39-Window](https://github.com/WernerKr/weewx-sunrainduration/assets/93549501/d5aa94a8-e921-4f1e-b23b-dd0f39b3be20)
+
+```
+
+  Bootstrap History:
+   [[sunshineDur]]
+       obs_type = sunshineDur
+       colors = sunshineDur, hour
+       aggregate_type = sum
+       units = h
+       summary_column = true
+       summary_heading = Std.
+
+   [[rainDur]]
+       obs_type = rainDur
+       colors = rainDur, hour
+       aggregate_type = sum
+       units = h
+       summary_column = true
+       summary_heading = Std.
+
+
